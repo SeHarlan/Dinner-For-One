@@ -1,5 +1,5 @@
 const scl = 2
-let displayScale = 0.4
+let displayScale = 1
 let cnv;
 let graphics, myShader;
 
@@ -107,9 +107,12 @@ function preload() {
 }
 
 function setup() {
-  const startW = isHorizontal ? 1600 : 900
-  const startH = isHorizontal ? 900 : 1600
-  cnv = createCanvas(startW * scl, startH * scl, WEBGL);
+  // const startW = isHorizontal ? 1600 : 900
+  // const startH = isHorizontal ? 900 : 1600
+  // cnv = createCanvas(startW * scl, startH * scl, WEBGL);
+
+  cnv = createCanvas(windowWidth, windowHeight, WEBGL);
+  
   colorMode(HSL)
 
   graphics = createGraphics(width, height);
