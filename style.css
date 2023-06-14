@@ -1,0 +1,71 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-smooth: never;
+  -webkit-font-smoothing : none;
+  
+}
+
+canvas {
+  display: block;
+}
+
+.x02 {
+  transform: scale(0.2);
+}
+.x03 {
+  transform: scale(0.3);
+}
+.x04 {
+  transform: scale(0.4);
+}
+.x05 {
+  transform: scale(0.5);
+}
+.x06 {
+  transform: scale(0.6);
+}
+.x07 {
+  transform: scale(0.7);
+}
+.x08 {
+  transform: scale(0.8);
+}
+.x09 {
+  transform: scale(0.9);
+}
+.x10 {
+  transform: scale(1.0);
+}
+.x11 {
+  transform: scale(1.1);
+}
+.x12 {
+  transform: scale(1.2);
+}
+.x13 {
+  transform: scale(1.3);
+}
+.x14 {
+  transform: scale(1.4);
+}
+.x15 {
+  transform: scale(1.5);
+}
+.x16 {
+  transform: scale(1.6);
+}
+.x17 {
+  transform: scale(1.7);
+}
+.x18 {
+  transform: scale(1.8);
+}
+.x19 {
+  transform: scale(1.9);
+}
