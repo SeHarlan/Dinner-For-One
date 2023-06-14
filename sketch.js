@@ -20,7 +20,7 @@ let color1, color2, color3, color4, color5;
 
 let testRun = false
 let isHorizontal = true
-const palettes = ["depths", "forest", "lust", "rust"]
+const palettes = ["depression", "jealousy", "lust", "anger"]
 
 //tv static instead of canvas texture
   // also glitch stuff
@@ -32,7 +32,7 @@ function chooseColorPalette() {
 
   //randomize the sort function for a weighted random?
   palette = palettes.sort(() => random() - 0.35)[0]//"neon"//"base", 
-  console.log("🚀 ~ file: sketch.js:86 ~ chooseColorpalette ~ palette:", palette)
+  console.log("PALETTE: ", palette)
   bgColor = [60, 50, 1]
   wordAngleRounding = random(1.5, 2)
   switch (palette) {
@@ -44,7 +44,7 @@ function chooseColorPalette() {
       color5 = color(50, 20, 14)//yellow
       break;
     }
-    case "rust": {//Anger
+    case "anger": {//Anger
       wordAngleRounding = 1
       const accent = color(20, 80, 18)
       color1 = color(180, 5, 60)
@@ -54,7 +54,7 @@ function chooseColorPalette() {
       color5 = accent
       break;  
     }
-    case "forest": {//Jealousy
+    case "jealousy": {//Jealousy
       wordAngleRounding = 1.8
       const accent = color(240, 20, 30)
       color1 = color(100, 30, 10)
@@ -64,7 +64,7 @@ function chooseColorPalette() {
       color5 = accent
       break;
     }
-    case "depths": {//Despair
+    case "depression": {//Despair
       wordAngleRounding = 2.2
       const accent = color(60, 20, 45)
       color1 = color(200, 50, 15)
@@ -110,11 +110,20 @@ function setup() {
   const startW = isHorizontal ? 1600 : 900
   const startH = isHorizontal ? 900 : 1600
   cnv = createCanvas(startW * scl, startH * scl, WEBGL);
-  setScaleClass(displayScale)
   colorMode(HSL)
 
   graphics = createGraphics(width, height);
   graphics.colorMode(HSL)
+
+  minDimension = min(height, width)
+  maxDimension = max(height, width)
+
+  // const minWindowDim = min(windowHeight, windowWidth)
+  // const dimRatio = (minWindowDim / minDimension) * windowWidth / windowHeight
+  // console.log("🚀 ~ file: sketch.js:123 ~ setup ~ dimRatio:", dimRatio)
+  // displayScale = round(dimRatio * 10) / 10
+  // console.log("🚀 ~ file: sketch.js:125 ~ setup ~ displayScale:", displayScale)
+  setScaleClass(displayScale)
 
 
   const s = random(1000)
@@ -126,8 +135,6 @@ function setup() {
 
   chooseColorPalette()
 
-  minDimension = min(height, width)
-  maxDimension = max(height, width)
   baseSW = minDimension / 900;
   margin = minDimension * 0.09;
 

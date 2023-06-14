@@ -5,10 +5,7 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-  font-smooth: never;
-  -webkit-font-smoothing : none;
-  
+  overflow: hidden;  
 }
 
 canvas {
